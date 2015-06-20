@@ -23,30 +23,34 @@ class UnequalScoreState extends GameState
      */
     public function getScore(TennisGame $tennisGame)
     {
-        $score = '';
-        for ($i = 1; $i < 3; $i++) {
-            if ($i == 1) {
-                $tempScore = $tennisGame->getPlayerOnePoints();
-            } else {
-                $score .= "-";
-                $tempScore = $tennisGame->getPlayerTwoPoints();
-            }
-            switch ($tempScore) {
-                case 0:
-                    $score .= "Love";
-                    break;
-                case 1:
-                    $score .= "Fifteen";
-                    break;
-                case 2:
-                    $score .= "Thirty";
-                    break;
-                case 3:
-                    $score .= "Forty";
-                    break;
-            }
-        }
+        return sprintf('%s-%s',
+            $this->getScoreDescription($tennisGame->getPlayerOnePoints()),
+            $this->getScoreDescription($tennisGame->getPlayerTwoPoints())
+        );
+    }
 
-        return $score;
+    /**
+     * @param $scorePoints
+     *
+     * @return string
+     */
+    protected function getScoreDescription($scorePoints)
+    {
+        $scoreDescription = '';
+        switch ($scorePoints) {
+            case 0:
+                $scoreDescription .= "Love";
+                break;
+            case 1:
+                $scoreDescription .= "Fifteen";
+                break;
+            case 2:
+                $scoreDescription .= "Thirty";
+                break;
+            case 3:
+                $scoreDescription .= "Forty";
+                break;
+        }
+        return $scoreDescription;
     }
 }
