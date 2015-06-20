@@ -53,4 +53,9 @@ class TennisGameOne implements TennisGame
     {
         return $this->playerTwoScore;
     }
+
+    public function playerWonMatch()
+    {
+        return (abs($this->getPlayerOnePoints() - $this->getPlayerTwoPoints()) >= 2);
+    }
 }

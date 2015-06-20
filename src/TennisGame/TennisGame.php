@@ -28,4 +28,9 @@ interface TennisGame
      * @return int
      */
     public function getPlayerTwoPoints();
+
+    /**
+     * @return bool
+     */
+    public function playerWonMatch();
 }

@@ -6,9 +6,7 @@ class AdvantageGameState extends GameState
 {
     public function wonPoint(TennisGame $tennisGame, $playerName)
     {
-        $minusResult = abs($tennisGame->getPlayerOnePoints() - $tennisGame->getPlayerTwoPoints());
-
-        if ($minusResult == 2) {
+        if ($tennisGame->playerWonMatch()) {
             $tennisGame->setState(new WinGameState());
         }
     }

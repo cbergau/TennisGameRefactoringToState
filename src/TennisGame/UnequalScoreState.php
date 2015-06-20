@@ -6,9 +6,8 @@ class UnequalScoreState extends GameState
 {
     public function wonPoint(TennisGame $tennisGame, $playerName)
     {
-        $minusResult = abs($tennisGame->getPlayerOnePoints() - $tennisGame->getPlayerTwoPoints());
         if ($tennisGame->getPlayerOnePoints() >= 4 || $tennisGame->getPlayerTwoPoints() >= 4) {
-            if ($minusResult >= 2) {
+            if ($tennisGame->playerWonMatch()) {
                 $tennisGame->setState(new WinGameState());
                 return;
             }
