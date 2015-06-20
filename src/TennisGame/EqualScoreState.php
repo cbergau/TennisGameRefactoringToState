@@ -4,7 +4,7 @@ namespace TennisGame;
 
 class EqualScoreState extends GameState
 {
-    public function wonPoint(TennisGame $tennisGame, $playerName)
+    public function wonPoint(TennisGame $tennisGame)
     {
         $tennisGame->setState(new UnequalScoreState());
     }

@@ -35,7 +35,7 @@ class TennisGameOne implements TennisGame
             $this->playerTwoScore++;
         }
 
-        $this->gameState->wonPoint($this, $playerName);
+        $this->gameState->wonPoint($this);
     }
 
     public function getScore()

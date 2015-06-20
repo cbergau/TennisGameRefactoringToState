@@ -6,9 +6,8 @@ abstract class GameState
 {
     /**
      * @param TennisGame $tennisGame
-     * @param string     $playerName
      */
-    abstract public function wonPoint(TennisGame $tennisGame, $playerName);
+    abstract public function wonPoint(TennisGame $tennisGame);
 
     /**
      * @param TennisGame $tennisGame

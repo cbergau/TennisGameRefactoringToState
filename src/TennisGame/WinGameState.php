@@ -4,7 +4,7 @@ namespace TennisGame;
 
 class WinGameState extends GameState
 {
-    public function wonPoint(TennisGame $tennisGame, $playerName)
+    public function wonPoint(TennisGame $tennisGame)
     {
         throw new \LogicException('A player already won a game');
     }
