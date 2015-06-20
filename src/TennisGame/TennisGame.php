@@ -33,4 +33,9 @@ interface TennisGame
      * @return bool
      */
     public function playerWonMatch();
+
+    /**
+     * @return bool
+     */
+    public function playerHasAdvantage();
 }
