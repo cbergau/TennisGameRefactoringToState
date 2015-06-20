@@ -36,9 +36,6 @@ class TennisGameOne implements TennisGame
         return $this->gameState->getScore($this);
     }
 
-    /**
-     * @param GameState $gameState
-     */
     public function setState(GameState $gameState)
     {
         $this->gameState = $gameState;
