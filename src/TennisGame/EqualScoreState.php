@@ -16,21 +16,10 @@ class EqualScoreState extends GameState
      */
     public function getScore(TennisGame $tennisGame)
     {
-        switch ($tennisGame->getPlayerOnePoints()) {
-            case 0:
-                $score = 'Love-All';
-                break;
-            case 1:
-                $score = "Fifteen-All";
-                break;
-            case 2:
-                $score = "Thirty-All";
-                break;
-            default:
-                $score = "Deuce";
-                break;
+        if ($tennisGame->getPlayerOnePoints() <= 2) {
+            return ScorePointToDescription::getDescriptionByPoints($tennisGame->getPlayerOnePoints());
         }
 
-        return $score;
+        return 'Deuce';
     }
 }

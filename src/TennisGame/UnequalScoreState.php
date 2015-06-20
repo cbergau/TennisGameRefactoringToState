@@ -36,21 +36,6 @@ class UnequalScoreState extends GameState
      */
     protected function getScoreDescription($scorePoints)
     {
-        $scoreDescription = '';
-        switch ($scorePoints) {
-            case 0:
-                $scoreDescription .= "Love";
-                break;
-            case 1:
-                $scoreDescription .= "Fifteen";
-                break;
-            case 2:
-                $scoreDescription .= "Thirty";
-                break;
-            case 3:
-                $scoreDescription .= "Forty";
-                break;
-        }
-        return $scoreDescription;
+        return ScorePointToDescription::getDescriptionByPoints($scorePoints);
     }
 }
