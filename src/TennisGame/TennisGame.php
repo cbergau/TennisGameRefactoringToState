@@ -5,8 +5,7 @@ namespace TennisGame;
 interface TennisGame
 {
     /**
-     * @param  $playerName
-     * @return void
+     * @param string $playerName
      */
     public function wonPoint($playerName);
 
@@ -20,7 +19,13 @@ interface TennisGame
      */
     public function setState(GameState $gameState);
 
+    /**
+     * @return int
+     */
     public function getPlayerOnePoints();
 
+    /**
+     * @return int
+     */
     public function getPlayerTwoPoints();
 }
