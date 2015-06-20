@@ -17,7 +17,7 @@ class WinGameState extends GameState
     public function getScore(TennisGame $tennisGame)
     {
         return ($tennisGame->getPlayerOnePoints() > $tennisGame->getPlayerTwoPoints())
-            ? 'Win for player1'
-            : 'Win for player2';
+            ? 'Win for ' . TennisGameOne::PLAYER_1_ID
+            : 'Win for ' . TennisGameOne::PLAYER_2_ID;
     }
 }

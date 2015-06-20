@@ -7,6 +7,9 @@ class TennisGameOne implements TennisGame
     private $playerOneScore = 0;
     private $playerTwoScore = 0;
 
+    const PLAYER_1_ID = 'player1';
+    const PLAYER_2_ID = 'player2';
+
     /**
      * @var GameState
      */
@@ -19,7 +22,7 @@ class TennisGameOne implements TennisGame
 
     public function wonPoint($playerName)
     {
-        if ('player1' == $playerName) {
+        if (self::PLAYER_1_ID == $playerName) {
             $this->playerOneScore++;
         } else {
             $this->playerTwoScore++;

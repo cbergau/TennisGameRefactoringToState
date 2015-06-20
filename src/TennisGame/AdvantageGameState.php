@@ -21,7 +21,7 @@ class AdvantageGameState extends GameState
     public function getScore(TennisGame $tennisGame)
     {
         return ($tennisGame->getPlayerOnePoints() > $tennisGame->getPlayerTwoPoints())
-            ? 'Advantage player1'
-            : 'Advantage player2';
+            ? 'Advantage ' . TennisGameOne::PLAYER_1_ID
+            : 'Advantage ' . TennisGameOne::PLAYER_2_ID;
     }
 }
