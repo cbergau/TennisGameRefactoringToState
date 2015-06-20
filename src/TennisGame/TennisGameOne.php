@@ -4,11 +4,18 @@ namespace TennisGame;
 
 class TennisGameOne implements TennisGame
 {
-    private $playerOneScore = 0;
-    private $playerTwoScore = 0;
-
     const PLAYER_1_ID = 'player1';
     const PLAYER_2_ID = 'player2';
+
+    /**
+     * @var int
+     */
+    private $playerOneScore = 0;
+
+    /**
+     * @var int
+     */
+    private $playerTwoScore = 0;
 
     /**
      * @var GameState
