@@ -31,4 +31,16 @@ class TennisGameOneTest extends TennisGameTestCase
 
         $this->assertEquals($expectedResult, $this->_game->getScore());
     }
+
+    /**
+     * @expectedException \LogicException
+     */
+    public function testCanNotScoreIfGameAlreadyWon()
+    {
+        $this->_game->wonPoint('player1');
+        $this->_game->wonPoint('player1');
+        $this->_game->wonPoint('player1');
+        $this->_game->wonPoint('player1');
+        $this->_game->wonPoint('player1');
+    }
 }

@@ -6,7 +6,7 @@ class WinGameState extends GameState
 {
     public function wonPoint(TennisGame $tennisGame, $playerName)
     {
-
+        throw new \LogicException('A player already won a game');
     }
 
     /**
