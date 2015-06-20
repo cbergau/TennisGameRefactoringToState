@@ -2,7 +2,7 @@
   "name": "cbergau/tennis-refactoring-kata",
   "description": "Tennis Refactoring Kata from emilybache",
   "minimum-stability": "stable",
-  "license": "unknown",
+  "license": "MIT",
   "authors": [
     {
       "name": "Chritian Bergau",
