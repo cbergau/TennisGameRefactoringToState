@@ -6,7 +6,7 @@ class TennisGameOneTest extends TennisGameTestCase
 {
     public function setUp()
     {
-        $this->_game = new TennisGameOne('player1', 'player2');
+        $this->game = new TennisGameOne('player1', 'player2');
     }
 
     /**
@@ -22,14 +22,14 @@ class TennisGameOneTest extends TennisGameTestCase
 
         for ($i = 0; $i < $highestScore; $i++) {
             if ($i < $score1) {
-                $this->_game->wonPoint("player1");
+                $this->game->wonPoint("player1");
             }
             if ($i < $score2) {
-                $this->_game->wonPoint("player2");
+                $this->game->wonPoint("player2");
             }
         }
 
-        $this->assertEquals($expectedResult, $this->_game->getScore());
+        $this->assertEquals($expectedResult, $this->game->getScore());
     }
 
     /**
@@ -37,10 +37,10 @@ class TennisGameOneTest extends TennisGameTestCase
      */
     public function testCanNotScoreIfGameAlreadyWon()
     {
-        $this->_game->wonPoint('player1');
-        $this->_game->wonPoint('player1');
-        $this->_game->wonPoint('player1');
-        $this->_game->wonPoint('player1');
-        $this->_game->wonPoint('player1');
+        $this->game->wonPoint('player1');
+        $this->game->wonPoint('player1');
+        $this->game->wonPoint('player1');
+        $this->game->wonPoint('player1');
+        $this->game->wonPoint('player1');
     }
 }

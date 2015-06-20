@@ -5,7 +5,7 @@ namespace TennisGame;
 class TennisGameTestCase extends \PHPUnit_Framework_TestCase
 {
     /** @var TennisGame */
-    protected $_game = null;
+    protected $game = null;
 
     /**
      * @return mixed[][]
