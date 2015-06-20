@@ -16,6 +16,6 @@ class InitialGameState extends GameState
      */
     public function getScore(TennisGame $tennisGame)
     {
-        return 'Love-All';
+        return ScorePointToDescription::getDescriptionByPoints(0) . '-All';
     }
 }
